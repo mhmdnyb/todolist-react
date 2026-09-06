@@ -2,7 +2,12 @@ import { useRef } from "react";
 function TaskInput({ tasks, setTask }) {
   const inputRef = useRef();
   function addTask() {
-    setTask([...tasks, inputRef.current.value]);
+    const inputValue = inputRef.current.value;
+    if (!inputValue) {
+      return;
+    }
+    setTask([...tasks, inputValue]);
+    inputRef.current.value = "";
   }
   return (
     <div className="flex  gap-x-3">
