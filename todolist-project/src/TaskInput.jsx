@@ -13,6 +13,13 @@ function TaskInput({ tasks, setTask }) {
     <div className="flex  gap-x-3">
       <div className="w-85 rounded-md ring-1 ring-white/50 has-focus:ring-2 has-focus:ring-white/60">
         <input
+          onKeyDown={(event) => {
+            switch (event.key) {
+              case "Enter":
+                addTask();
+                break;
+            }
+          }}
           ref={inputRef}
           type="text"
           name="taskInput"
