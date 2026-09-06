@@ -8,7 +8,7 @@ function App() {
       <TaskInput tasks={tasks} setTask={setTask}></TaskInput>
       <div className="flex flex-col gap-y-3">
         {tasks.map((task) => {
-          return <Task title={task}></Task>;
+          return <Task title={task} key={crypto.randomUUID()}></Task>;
         })}
       </div>
     </>
