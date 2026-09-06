@@ -10,6 +10,7 @@
       "Courier New", monospace;
     --color-purple-400: oklch(71.4% 0.203 305.504);
     --color-purple-500: oklch(62.7% 0.265 303.9);
+    --color-purple-700: oklch(49.6% 0.265 301.924);
     --color-fuchsia-500: oklch(66.7% 0.295 322.15);
     --color-fuchsia-700: oklch(51.8% 0.253 323.949);
     --color-gray-100: oklch(96.7% 0.003 264.542);
@@ -280,6 +281,9 @@
   .bg-fuchsia-500 {
     background-color: var(--color-fuchsia-500);
   }
+  .bg-purple-500 {
+    background-color: var(--color-purple-500);
+  }
   .bg-linear-to-br {
     --tw-gradient-position: to bottom right;
     @supports (background-image: linear-gradient(in lab, red, red)) {
@@ -375,6 +379,9 @@
   }
   .group-has-checked\:bg-fuchsia-700:is(:where(.group):has(:checked) *) {
     background-color: var(--color-fuchsia-700);
+  }
+  .group-has-checked\:bg-purple-700:is(:where(.group):has(:checked) *) {
+    background-color: var(--color-purple-700);
   }
   .focus\:outline-0:focus {
     outline-style: var(--tw-outline-style);
